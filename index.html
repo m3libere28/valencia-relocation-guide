@@ -1,239 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valencia Relocation Guide</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 3rem 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        .intro {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-        
-        .intro h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-        
-        .sections {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .section-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .section-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .section-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .section-card ul {
-            list-style-position: inside;
-            margin-left: 1rem;
-        }
-        
-        .section-card li {
-            margin-bottom: 0.5rem;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .highlight {
-            background: #fff3cd;
-            padding: 1rem;
-            border-left: 4px solid #ffc107;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valencia Relocation Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0f172a; --card:#0b1225aa; --primary:#2dd4bf; --primary-2:#22d3ee; --accent:#f59e0b; --accent2:#ef4444; --text:#e5e7eb; --muted:#94a3b8; --med3:#0ea5e9; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#061023 0%, #0f172a 40%, #111827 100%);color:var(--text);font-family:Inter,Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;scroll-behavior:smooth}
+    a{color:var(--primary)}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:linear-gradient(90deg, rgba(6,16,35,0.7), rgba(17,24,39,0.6));border-bottom:1px solid rgba(255,255,255,0.08)}
+    .nav .wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 16px}
+    .brand{font-weight:800;letter-spacing:.5px;background:linear-gradient(90deg,var(--primary),var(--primary-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .nav ul{display:flex;flex-wrap:wrap;gap:8px;margin-left:auto;list-style:none;padding:0}
+    .nav a.btn{padding:8px 12px;border-radius:10px;color:#0a0f1f;background:linear-gradient(90deg,var(--primary),var(--primary-2));font-weight:600;text-decoration:none}
+    .nav a.link{padding:6px 10px;border-radius:8px;color:var(--text);text-decoration:none}
+    .nav a.link.active{background:rgba(255,255,255,0.08)}
+    .hero{position:relative;min-height:78vh;display:grid;place-items:center;overflow:hidden}
+    .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(1.1)}
+    .hero .glass{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:36px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));border:1px solid rgba(255,255,255,0.12);box-shadow:0 20px 80px rgba(0,0,0,.45)}
+    .title{font-weight:900;letter-spacing:.6px;font-size:clamp(28px,5vw,56px);margin:0 0 8px;animation:rise .9s ease-out both}
+    .subtitle{color:var(--muted);font-size:clamp(14px,2.2vw,20px);margin:0 0 18px;animation:fade .9s .15s both}
+    .ctas{display:flex;flex-wrap:wrap;gap:12px}
+    .cta{padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.08);color:var(--text);text-decoration:none;font-weight:600}
+    .cta.primary{background:linear-gradient(90deg,var(--primary),var(--primary-2));color:#082235;border:none}
+    @keyframes rise{from{transform:translateY(12px);opacity:.0}to{transform:translateY(0);opacity:1}}
+    @keyframes fade{from{opacity:0}to{opacity:1}}
+    section{padding:52px 16px}
+    .wrap{max-width:1200px;margin:0 auto}
+    .section-title{font-size:28px;margin:0 0 18px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media(max-width:900px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg, var(--card), rgba(8,12,25,0.5));border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+    .glassbar{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:8px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);font-size:12px;color:var(--muted)}
+    .timeline{display:flex;gap:12px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+    .time-step{scroll-snap-align:start;min-width:200px}
+    .time-step .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);display:inline-block;margin-right:8px}
+    .counters{display:flex;flex-wrap:wrap;gap:12px}
+    .counter{flex:1 1 220px}
+    .counter h3{margin:0 0 6px}
+    .bar{height:10px;background:rgba(255,255,255,0.1);border-radius:8px;overflow:hidden}
+    .bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--primary));width:0}
+    .chart{height:220px}
+    details.card summary{cursor:pointer;font-weight:600;padding:16px}
+    details.card{padding:0}
+    details.card .inner{padding:16px;border-top:1px solid rgba(255,255,255,0.08)}
+    .status{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px}
+    .ok{background:#064e3b;color:#a7f3d0}
+    .warn{background:#3f1d0f;color:#fdba74}
+    .col-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    @media(max-width:1000px){.col-list{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.col-list{grid-template-columns:1fr}}
+    .carousel{display:flex;gap:12px;overflow:auto;scroll-snap-type:x mandatory}
+    .carousel > .card{min-width:300px;scroll-snap-align:center}
+    .master-list{display:grid;grid-template-columns:1fr;gap:8px}
+    .progress{height:10px;border-radius:8px;background:rgba(255,255,255,0.1);overflow:hidden}
+    .progress > span{display:block;height:100%;background:linear-gradient(90deg,var(--primary),var(--med3));width:0}
+    footer{padding:40px 16px;border-top:1px solid rgba(255,255,255,0.08);background:#0a1224}
+    .footer-grid{display:grid;gap:16px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .lang-toggle{margin-top:12px}
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🌴 Valencia Relocation Guide</h1>
-        <p>Your comprehensive guide to moving and living in Valencia, Spain</p>
-    </header>
-    
-    <div class="container">
-        <div class="intro">
-            <h2>Welcome to Valencia!</h2>
-            <p>Valencia is Spain's third-largest city, offering the perfect blend of Mediterranean lifestyle, rich culture, stunning architecture, and modern amenities. This guide will help you navigate your relocation journey and settle into your new life in this beautiful coastal city.</p>
-            
-            <div class="highlight">
-                <strong>Quick Facts:</strong> Population: ~800,000 | Language: Spanish (Valencian also spoken) | Climate: Mediterranean | Currency: Euro (€)
-            </div>
-        </div>
-        
-        <div class="sections">
-            <div class="section-card">
-                <h3>📋 Legal Requirements</h3>
-                <ul>
-                    <li>NIE (Foreigner Identity Number) - Required for all legal activities</li>
-                    <li>Empadronamiento (Local registration)</li>
-                    <li>Social Security Number (for employment)</li>
-                    <li>Spanish bank account</li>
-                    <li>Health insurance (public or private)</li>
-                    <li>Residency permit (if non-EU citizen)</li>
-                </ul>
-            </div>
-            
-            <div class="section-card">
-                <h3>🏠 Finding Accommodation</h3>
-                <ul>
-                    <li>Popular neighborhoods: Ruzafa, El Carmen, Benimaclet, Campanar</li>
-                    <li>Average rent: €600-1000 for 1-2 bedroom apartment</li>
-                    <li>Use Idealista, Fotocasa, or local agencies</li>
-                    <li>Expect to pay 1-2 months deposit</li>
-                    <li>Consider proximity to metro/bus lines</li>
-                    <li>Beach areas: Malvarrosa, Cabanyal, Patacona</li>
-                </ul>
-            </div>
-            
-            <div class="section-card">
-                <h3>💼 Employment & Business</h3>
-                <ul>
-                    <li>Growing tech and startup scene</li>
-                    <li>Tourism and hospitality sectors</li>
-                    <li>Teaching English (high demand)</li>
-                    <li>Port and logistics industries</li>
-                    <li>Average salary: €20,000-35,000/year</li>
-                    <li>Coworking spaces available throughout city</li>
-                </ul>
-            </div>
-            
-            <div class="section-card">
-                <h3>🚇 Transportation</h3>
-                <ul>
-                    <li>Metro system with 9 lines</li>
-                    <li>Extensive bus network (EMT)</li>
-                    <li>Valenbisi bike-sharing program</li>
-                    <li>Train connections to Madrid, Barcelona</li>
-                    <li>Valencia Airport (10km from city center)</li>
-                    <li>Walkable city center</li>
-                </ul>
-            </div>
-            
-            <div class="section-card">
-                <h3>🏥 Healthcare</h3>
-                <ul>
-                    <li>Public healthcare through Social Security</li>
-                    <li>European Health Card for EU citizens</li>
-                    <li>Major hospitals: Hospital La Fe, Hospital Clínico</li>
-                    <li>Private insurance options available</li>
-                    <li>Many English-speaking doctors</li>
-                    <li>Pharmacies widely available</li>
-                </ul>
-            </div>
-            
-            <div class="section-card">
-                <h3>🎓 Education</h3>
-                <ul>
-                    <li>International schools available</li>
-                    <li>Public schools (free)</li>
-                    <li>University of Valencia (one of Spain's oldest)</li>
-                    <li>Spanish language schools throughout city</li>
-                    <li>Bilingual programs available</li>
-                    <li>School year: September to June</li>
-                </ul>
-            </div>
-            
-            <div class="section-card">
-                <h3>🍽️ Cost of Living</h3>
-                <ul>
-                    <li>Monthly expenses: €1,200-1,800 (single person)</li>
-                    <li>Restaurant meal: €10-15</li>
-                    <li>Coffee: €1.50-2.50</li>
-                    <li>Groceries: €200-300/month</li>
-                    <li>Utilities: €80-120/month</li>
-                    <li>Public transport: €40/month (unlimited)</li>
-                </ul>
-            </div>
-            
-            <div class="section-card">
-                <h3>🎉 Culture & Lifestyle</h3>
-                <ul>
-                    <li>Las Fallas festival (March)</li>
-                    <li>Paella originated in Valencia</li>
-                    <li>Beautiful beaches and parks</li>
-                    <li>City of Arts and Sciences</li>
-                    <li>Vibrant nightlife in Ruzafa and El Carmen</li>
-                    <li>300+ days of sunshine per year</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="intro">
-            <h2>Useful Resources</h2>
-            <ul>
-                <li><strong>Expat Communities:</strong> Valencia Expats, Internations Valencia</li>
-                <li><strong>Local Government:</strong> www.valencia.es</li>
-                <li><strong>Emergency Number:</strong> 112</li>
-                <li><strong>Tourist Information:</strong> Visit Valencia website</li>
-                <li><strong>Language Learning:</strong> Escuela Oficial de Idiomas, private academies</li>
-            </ul>
-        </div>
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap">
+      <div class="brand">Valencia Relocation Guide</div>
+      <ul>
+        <li><a class="link" href="#timeline">Timeline</a></li>
+        <li><a class="link" href="#budget">Budget</a></li>
+        <li><a class="link" href="#documents">Documents</a></li>
+        <li><a class="link" href="#arrival">Arrival</a></li>
+        <li><a class="link" href="#dnv">DNV</a></li>
+        <li><a class="link" href="#post">Next Steps</a></li>
+        <li><a class="link" href="#life">Life</a></li>
+        <li><a class="link" href="#master">Master Checklist</a></li>
+      </ul>
+      <a class="btn" href="#budget">Budget Calculator</a>
     </div>
-    
-    <footer>
-        <p>&copy; 2025 Valencia Relocation Guide | Made with ❤️ for new Valencians</p>
-    </footer>
-</body>
-</html>
+  </nav>
+
+  <header class="hero" role="banner">
+    <img class="bg" alt="Valencia skyline at sunset" src="https://images.unsplash.com/photo-1578926375605-eaf7559b1453?q=80&w=1600&auto=format&fit=crop" />
+    <div class="glass">
+      <h1 class="title">Move to Valencia with Confidence</h1>
+      <p class="subtitle">An end-to-end relocation guide from planning to padrón.</p>
+      <div class="ctas" role="group" aria-label="Primary actions">
+        <a class="cta primary" href="#timeline">Get Started</a>
+        <a class="cta" href="#budget">Budget Calculator</a>
+        <a class="cta" href="#master">Step-by-Step Guide</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="timeline">
+    <div class="wrap">
+      <h2 class="section-title">Relocation Timeline: Aug 2025 – Jul 2026</h2>
+      <div class="timeline" aria-label="Horizontal timeline">
+        <div class="card time-step"><div class="pill"><span class="dot"></span>Aug 2025</div><h3>Plan & Budget</h3><p>Research neighborhoods, estimate costs, check DNV requirements.</p></div>
+        <div class="card time-step"><div class="pill"><span class="dot"></span>Sep</div><h3>Documents</h3><p>Gather apostilles, translations, bank letters, insurance quotes.</p></div>
+        <div class="card time-step"><div class="pill"><span class="dot"></span>Oct</div><h3>Apply DNV</h3><p>File digital nomad visa application. Book consulate slot.</p></div>
+        <div class="card time-step"><div class="pill"><span class="dot"></span>Nov–Dec</div><h3>Await Decision</h3><p>Track status, prepare housing shortlist.</p></div>
+        <div class="card time-step"><div class="pill"><span class="dot"></span>Jan 2026</div><h3>Arrive</h3><p>Temporary stay, SIM, bank appointment, padrón pre-booking.</p></div>
+        <div class="card time-step"><div class="pill"><span class="dot"></span>Feb–Apr</div><h3>NIE & Cert</h3><p>Get NIE/TIE, digital certificate, health registration.</p></div>
+        <div class="card time-step"><div class="pill"><span class="dot"></span>May–Jul</div><h3>Settle In</h3><p>Schools, long-term lease, community life, renewals calendar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="budget">
+    <div class="wrap">
+      <h2 class="section-title">Budget & Cost of Living</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Income & Requirements</h3>
+          <div class="counters">
+            <div class="counter"><h3>Net Monthly Income</h3><div class="glassbar"><strong id="netVal">€0</strong></div></div>
+            <div class="counter"><h3>DNV Minimum (single)</h3><div class="glassbar"><strong>≈ €2,160</strong></div></div>
+            <div class="counter"><h3>Target Savings Buffer</h3><div class="glassbar"><strong id="saveVal">€0</strong></div></div>
+          </div>
+          <div class="bar" aria-label="Income vs requirement"><span id="incomeBar"></span></div>
+          <div style="margin-top:12px" class="glassbar">
+            <label>Enter monthly income (€): <input id="income" type="number" min="0" step="50" value="2500" /></label>
+            <label style="margin-left:12px">Savings goal (€): <input id="savings" type="number" min="0" step="50" value="300" /></label>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Expenses Breakdown</h3>
+          <canvas id="expChart" class="chart" aria-label="Monthly expenses chart"></canvas>
+          <div class="grid cols-2" style="margin-top:8px">
+            <label>Rent €<input id="rent" type="number" min="0" value="950"></label>
+            <label>Utilities €<input id="utils" type="number" min="0" value="120"></label>
+            <label>Groceries €<input id="groceries" type="number" min="0" value="280"></label>
+            <label>Transport €<input id="transport" type="number" min="0" value="40"></label>
+            <label>Insurance €<input id="ins" type="number" min="0" value="60"></label>
+            <label>Other €<input id="other" type="number" min="0" value="200"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px"><strong>Embedded Calculator:</strong> Coming soon — stubbed for integration with external API.</div>
+    </div>
+  </section>
+
+  <section id="documents">
+    <div class="wrap">
+      <h2 class="section-title">Document Checklist</h2>
+      <progress id="docProgress" max="100" value="0" style="width:100%;height:10px;border-radius:8px"></progress>
+      <details class="card" open>
+        <summary>Identity & Civil Status <span class="status ok">Required</span></summary>
+        <div class="inner">
+          <ul>
+            <li><label><input type="checkbox" class="doc"> Passport (6+ months validity)</label></li>
+            <li><label><input type="checkbox" class="doc"> Birth certificate (apostilled)</label></li>
+            <li><label><input type="checkbox" class="doc"> Marriage certificate (if applicable)</label></li>
+          </ul>
+          <p>Templates: <a href="#">Translation request</a>, <a href="#">Apostille guide</a></p>
+        </div>
+      </details>
+      <details class="card">
+        <summary>Financial Proof <span class="status ok">Required</span></summary>
+        <div class="inner">
+          <ul>
+            <li><label><input type="checkbox" class="doc"> Bank statements (last 6 months)</label></li>
+            <li><label><input type="checkbox" class="doc"> Work contract or client invoices</label></li>
+            <li><label><input type="checkbox" class="doc"> Private health insurance (no copay)</label></li>
+          </ul>
+          <p>
